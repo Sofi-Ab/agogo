@@ -1,0 +1,38 @@
+body{
+
+    background-color: rgb(65, 199, 139);
+}
+button{
+    border: none;
+    font-size: bold;
+    color: aliceblue;
+ background-color: rgb(65, 199, 139); ;  
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.content {
+    border: none;
+    margin-top:5rem ;
+   display: flex;
+  justify-content: center;
+}
+.content input{
+    border-radius: 2px;
+    width: 12rem;
+    height: 20px;
+    border: none;
+}
+
+div.compte{
+    font-size: 50px;
+    color: azure;
+    margin-top: 23rem;
+    display: flex;
+    justify-content: center;
+}
+
