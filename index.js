@@ -9,14 +9,14 @@ const form = document.querySelector('#formId')
 let showDates = document.getElementById('showDates') 
 
 let Dates = new Date();
-console.log(Dates);
+
 let getHeure = Dates.getHours()
-console.log(getHeure);
+
 
 let getMinute  = Dates.getMinutes()
-console.log(getMinute);
+
 let getSecond = Dates.getSeconds()
-console.log(getSecond);
+
 
 let inetervalSeconde = null;
 /* *********************** declaration des variables*************************** */
@@ -69,7 +69,7 @@ document.addEventListener('click', (e)=>{
         ajoutSecond = 20;
         second = 20
         console.log(e.target.id);
-        showDates.innerHTML  = `Be back at : ${getHeure } : ${getMinute} : ${Dates.setSeconds(getSecond)+ ajoutSecond}`
+        showDates.innerHTML  = `Be back at : ${getHeure } : ${getMinute} : ${getSecond}`
         if(inetervalSeconde) clearInterval(inetervalSeconde)
     inetervalSeconde = setInterval(decompte, 1000)
     }else if(e.target.id === 'cap'){
@@ -113,17 +113,22 @@ document.addEventListener('click', (e)=>{
 
 })
 form.addEventListener('submit', (e)=> {
+    showDates.innerHTML  = `Be back at : ${getHeure + heures} : ${getMinute + minute } : ${getSecond}`;
+
    e.preventDefault()
    if(inetervalSeconde) clearInterval(inetervalSeconde)
    if (inputSet.value >= 60) {
     heures = parseInt(inputSet.value / 60);
     minute = inputSet.value % 60;
-    second = minute % second
-
+    
    } 
    else{
+    showDates.innerHTML  = `Be back at : ${heures += getHeure} : ${minute + getMinute} : ${second = 0}`;
+
+    heures = parseInt(inputSet.value / 60);
     minute = inputSet.value % 60;
     second = 0
+
    }
     inetervalSeconde = setInterval(decompte, 1000)
 }) 
