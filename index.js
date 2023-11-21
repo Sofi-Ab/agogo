@@ -7,16 +7,16 @@ const inputSet = document.querySelector('input'); */
 const inputSet = document.querySelector('input'); 
 const form = document.querySelector('#formId')
 let showDates = document.getElementById('showDates') 
+let compteur = document.querySelector('.compte')
+
 
 let Dates = new Date();
 
 let getHeure = Dates.getHours()
 
-
 let getMinute  = Dates.getMinutes()
 
 let getSecond = Dates.getSeconds()
-
 
 let inetervalSeconde = null;
 /* *********************** declaration des variables*************************** */
@@ -60,6 +60,15 @@ function decompte () {
 
 }
 /* ************************************* L'evenement au click *********************** */
+//fonction quand l'operation fini
+/* if ( second == 0 && minute == 0 && heures == 0) {
+    showDates.style.display = 'none'
+    
+}else{
+    showDates.style.display = 'block'
+} */
+
+
 function ajouterDate(param1, param2, param3) {
     
    
